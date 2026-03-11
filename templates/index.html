@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Link to your CSS file in static/css/ -->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Beer Predictor</title>
+</head>
+<body>
+    <h1>Alcohol Consumption Predictor</h1>
+    
+    <!-- Infographics placeholder (as per requirements) -->
+    <!-- <div class="infographics">
+        <img src="your_data_plot.png" alt="Data Trends">
+    </div> -->
+
+    <form action="/predict" method="post">
+        <!-- <select name="country">
+            {% for c in countries %}<option value="{{c}}">{{c}}</option>{% endfor %}
+        </select> -->
+        <select name="continent">
+            {% for con in continents %}<option value="Continent" aria-placeholder="jasf">{{con}}</option>{% endfor %}
+        </select>
+        <input type="number" name="beer" placeholder="Beer Servings">
+        <input type="number" name="spirit" placeholder="Spirit Servings">
+        <input type="number" name="wine" placeholder="Wine Servings">
+        <button type="submit">Predict</button>
+    </form>
+
+    <h2>{{ prediction_text }}</h2>
+</body>
+</html>

@@ -1,0 +1,108 @@
+:root {
+    --primary-color: #fbc531; /* Beer-like gold */
+    --accent-color: #4cd137;  /* Fresh green */
+    --bg-gradient: linear-gradient(135deg, #1e272e 0%, #485460 100%);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg-gradient);
+    color: white;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-weight: 300;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Glassmorphism Container */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Infographic Styling */
+.infographics {
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.infographics img {
+    width: 100%;
+    display: block;
+}
+
+/* Form Styling */
+form {
+    display: grid;
+    gap: 15px;
+}
+
+input, select {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+input:focus, select:focus {
+    border-color: var(--primary-color);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+select option {
+    background: #2f3640; /* Dark background for dropdown options */
+    color: white;
+}
+
+button {
+    background: var(--primary-color);
+    color: #1e272e;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+    background: #e1b12c;
+    transform: translateY(-2px);
+}
+
+/* Prediction Result Text */
+.prediction-result {
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 8px;
+    background: rgba(76, 209, 55, 0.2);
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    font-weight: bold;
+}
